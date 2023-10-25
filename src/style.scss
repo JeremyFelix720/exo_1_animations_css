@@ -1,4 +1,4 @@
-@keyframes rotation_loader {
+@keyframes loader_rotation {
     0% {
         rotate: 0deg;
     }
@@ -19,11 +19,24 @@
     padding-top: 100px;
 }
 
-.square_box {
+.loader {
     width: 50px;
+    margin: 20px;
     aspect-ratio: 1/1;
     border: solid 5px lightblue;
     border-right: solid 5px blue;
     border-radius: 50%;
-    animation: rotation_loader 2s linear infinite;
+    animation: loader_rotation 2s linear infinite;
+}
+
+.spinner {
+    width: 50px;
+    margin: 20px;
+    aspect-ratio: 1/1;
+    background-image: url("img/spinner.png");
+    //background-image: url("https://www.pngall.com/wp-content/uploads/14/Loading-PNG-Image-File.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    animation: loader_rotation 2s linear infinite;
 }
