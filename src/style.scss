@@ -1,4 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
 @keyframes loader_rotation {
+    0% {
+        rotate: 0deg;
+    }
+    50% {
+        rotate: 180deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
+
+@keyframes text_scale {
+    0% {
+        scale: 1;
+        color: red;
+    }
+    50% {
+        scale: 2;
+        color: blue
+    }
+    100% {
+        scale: 1;
+        color: red;
+    }
+}
+
+@keyframes text_rotate {
     0% {
         rotate: 0deg;
     }
@@ -14,9 +43,11 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-content: space-between;
+    flex-wrap: wrap;
     width: 800px;
+    height: 600px;
     margin: auto;
-    padding-top: 100px;
 }
 
 .loader {
@@ -29,6 +60,23 @@
     animation: loader_rotation 2s linear infinite;
 }
 
+h1, a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 100%;
+    margin: 40px 0px;
+}
+
+h1 {
+    font-size: 36px;
+    color: dimgrey;
+}
+
+a {
+    font-size: 18px;
+    color: blue;
+}
+
 .spinner {
     width: 50px;
     margin: 20px;
@@ -39,4 +87,16 @@
     background-repeat: no-repeat;
     background-position: 0%;
     animation: loader_rotation 2s linear infinite;
+}
+
+.love:hover {
+    animation: text_scale 2s linear infinite, text_rotate 0.5s linear;
+}
+
+.love {
+    align-self: center;
+    justify-self: center;
+    font-family: "Courgette";
+    font-size: 70px;
+    animation: text_scale 2s linear infinite;
 }
